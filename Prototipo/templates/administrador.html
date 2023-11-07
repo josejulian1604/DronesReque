@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Administrador</title>
+    <!-- Aquí puedes incluir enlaces a hojas de estilo CSS si las tienes -->
+</head>
+<body>
+    <h1>{{ mensaje }}</h1>
+    
+    <h2>Opciones de Administrador:</h2>
+    <form method="post" action="/administrador">
+        <button type="submit" name="opcion" value="registrar_cliente">Registrar Cliente</button>
+        <button type="submit" name="opcion" value="crear_servicio">Crear Servicio</button>
+        <button type="submit" name="opcion" value="buscar_cliente">Buscar Cliente</button>
+        <button type="submit" name="opcion" value="buscar_servicio">Buscar Servicio</button>
+        <button type="submit" name="opcion" value="salir">Salir</button>
+    </form>
+</body>
+</html>
+
