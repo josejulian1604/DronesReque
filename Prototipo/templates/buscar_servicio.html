@@ -2,15 +2,71 @@
 <html>
 <head>
     <title>Buscar Servicio</title>
-    <!-- Aquí puedes incluir enlaces a hojas de estilo CSS si las tienes -->
+    <style>
+        body {
+            background-color: #bdecb6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        input[type="submit"] {
+            background-color: #bdecb6; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #bdecb6; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Búsqueda de Servicio</h1>
-    
-    <form method="post" action="/administrador/buscar_servicio">
-        <label for="cedula">Buscar por Cédula:</label>
-        <input type="text" id="cedula" name="cedula" required>
-        <input type="submit" value="Buscar">
-    </form>
+    <div class="container">
+        <h1>Búsqueda de Servicio</h1>
+        <form method="POST" action="/administrador/buscar_servicio">
+            <label for="cedula">Digite la cédula del cliente:</label>
+            <input type="text" id="cedula" name="cedula" required><br>
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
 </body>
 </html>

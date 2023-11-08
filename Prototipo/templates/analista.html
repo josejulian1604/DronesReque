@@ -2,17 +2,72 @@
 <html>
 <head>
     <title>Página de Analista</title>
+    <style>
+        body {
+            background-color: #bdecb6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #bdecb6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8cba92;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a la Página de Analista</h1>
-    <p>{{ mensaje }}</p>
-
-    <form method="post" action="/analista/actualizar_servicio">
-        <label for="cedula">Cédula del cliente:</label>
-        <input type="text" id="cedula" name="cedula" required>
-        <input type="submit" value="Actualizar Servicio">
-    </form>
-
-    <!-- Agrega aquí el contenido específico de la página de Analista -->
+    <div class="container">
+        <h1>{{ mensaje }}</h1>
+        <form method="post" action="/analista/actualizar_servicio">
+            <label for="cedula">Digite la cédula del cliente:</label>
+            <input type="text" id="cedula" name="cedula" required><br>
+            <input type="submit" value="Actualizar Servicio">
+        </form>
+    </div>
 </body>
 </html>

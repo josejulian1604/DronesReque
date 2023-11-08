@@ -34,7 +34,7 @@ def registro():
 
 @app.route('/administrador', methods=['GET', 'POST'])
 def administrador():
-    mensaje = "Bienvenido a la Página de Administrador"
+    mensaje = "Bienvenido Administrador"
     if request.method == 'POST':
         opcion = request.form['opcion']
         if opcion == 'registrar_cliente':
@@ -82,7 +82,7 @@ def tecnico():
 
 @app.route('/analista', methods=['GET', 'POST'])
 def analista():
-    mensaje = "¡Página de analista!"
+    mensaje = "Bienvenido Analista"
     
     if request.method == 'POST':
         cedula = request.form['cedula']
