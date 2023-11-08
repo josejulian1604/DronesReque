@@ -75,10 +75,19 @@ def buscar_servicio():
     return render_template('buscar_servicio.html', mensaje=mensaje)
 
 
-@app.route('/tecnico')
+@app.route('/tecnico', methods=['GET', 'POST'])
 def tecnico():
     mensaje = "¡Página de técnico!"
+    if request.method == 'POST':
+        cedula = request.form['cedula']
+        return redirect('/tecnico/consultar_servicio')
     return render_template('tecnico.html', mensaje=mensaje)
+
+@app.route('/tecnico/consultar_servicio', methods=['GET', 'POST'])
+def consultar_servicio():
+    mensaje = "¡Página de consultar servicio!"
+
+    return render_template('consultar_servicio.html', mensaje=mensaje)
 
 @app.route('/analista', methods=['GET', 'POST'])
 def analista():

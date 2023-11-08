@@ -1,84 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Iniciar Sesión</title>
-    <style>
-        body {
-            background-color: #bdecb6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .container {
-            background-color: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        label {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            margin-top: 10px;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        input[type="submit"] {
-            background-color: #b3967c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #93785f;
-        }
-
-        p {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        <form method="POST" action="/login">
-            <label for="email">Correo Electrónico:
-                <input type="email" id="email" name="email" required>
-            </label>
-            <label for="password">Contraseña:
-                <input type="password" id="password" name="password" required>
-            </label><br>
-            <input type="submit" value="Iniciar Sesión">
-        </form>
-        <p>¿No tienes una cuenta? <a href="/registro">Registrarse</a></p>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Hawk Login Page</title>
+    <link rel="stylesheet" href="./login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Agro Hawk</h1>
+          <p>Confianza y tecnología para el agricultor.</p>
+        </div>
+          <form method="POST" action="/login">
+            <input type="email" placeholder="Correo electrónico" required />
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="login">Iniciar sesión</button>
+            <hr>
+            <button class="create-account" onclick="window.location.href='/registro'">Crear cuenta nueva</button>
+          </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

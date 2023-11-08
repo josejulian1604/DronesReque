@@ -1,73 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Página de Analista</title>
-    <style>
-        body {
-            background-color: #bdecb6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
-            background-color: #b3967c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #b3967c;
-        }
-
-        p {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>{{ mensaje }}</h1>
-        <form method="post" action="/analista/actualizar_servicio">
-            <label for="cedula">Digite la cédula del cliente:</label>
-            <input type="text" id="cedula" name="cedula" required><br>
-            <input type="submit" value="Actualizar Servicio">
-        </form>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Hawk Analista</title>
+    <link rel="stylesheet" href="./login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Analista</h1>
+        </div>
+            <form method="post" action="/analista/actualizar_servicio">
+            <input type="email" placeholder="Digite la cédula del cliente:" required />
+            <hr>
+            <button class="create-account" onclick="window.location.href='/analista/actualizar_servicio'">Actualizar servicio</button>
+            </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

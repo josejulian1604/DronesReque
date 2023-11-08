@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Página de Administrador</title>
-    <style>
-        body {
-            background-color: #bdecb6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .container {
-            background-color: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            text-align: center;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        button {
-            background-color: #b3967c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        button:hover {
-            background-color: #b39e8d;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>{{ mensaje }}</h1>
-        <h2>Seleccione una de las siguientes opciones:</h2>
-        <form method="post" action="/administrador">
-            <button type="submit" name="opcion" value="registrar_cliente">Registrar cliente</button>
-            <button type="submit" name="opcion" value="crear_servicio">Registrar servicio</button>
-            <button type="submit" name="opcion" value="buscar_cliente">Buscar cliente</button>
-            <button type="submit" name="opcion" value="buscar_servicio">Buscar servicio</button>
-            <br>
-            <button type="submit" name="opcion" value="salir">Salir</button>
-        </form>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Hawk Administrador</title>
+    <link rel="stylesheet" href="./login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Administrador</h1>
+        </div>
+        <form class="registro">
+            <button class="login" onclick="window.location.href='/registrar_cliente'">Registrar cliente</button>
+            <hr>
+            <button class="create-account" onclick="window.location.href='/crear_servicio'" >Registrar servicio</button>
+            <button class="login" onclick="window.location.href='/buscar_cliente'" >Buscar cliente</button>
+            <hr>
+            <button class="create-account" onclick="window.location.href='/buscar_servicio'" >Buscar servicio</button>
+          </form>
+      </div>
     </div>
+  </body>
+</html>
