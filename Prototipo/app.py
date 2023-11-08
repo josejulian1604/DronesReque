@@ -94,11 +94,11 @@ def analista():
 
     return render_template('analista.html', mensaje=mensaje)
 
-@app.route('/analista/actualizar_servicio', methods=['GET', 'POST'])
+@app.route('/analista/consultar_servicio', methods=['GET', 'POST'])
 def actualizar_servicio():
     mensaje = "¡Página de actualizar servicio!"
 
-    return render_template('actualizar_servicio.html', mensaje=mensaje)
+    return render_template('consultar_servicio.html', mensaje=mensaje)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
