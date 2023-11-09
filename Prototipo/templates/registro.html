@@ -11,7 +11,7 @@
     <div class="content">
       <div class="flex-div">
         <div class="name-content">
-          <h1 class="logo">Registro</h1>
+          <h1 class="logo">Crear cuenta</h1>
         </div>
         <form class="registro">
             <input type="text" placeholder="Nombre" required />
@@ -20,15 +20,15 @@
             <input type="password" placeholder="Contraseña" required>
             <label>Rol:</label>
             <div class="roles">
+                <input type="radio" name="role" id="administrador" required>
                 <label for="administrador">Administrador</label>
-                <input type="radio" id="administrador" name="role" value="administrador" required>
+                <input type="radio" name="role" id="analista" required>
                 <label for="analista">Analista</label>
-                <input type="radio" id="analista" name="role" value="analista" required>
+                <input type="radio" name="role" id="tecnico" required>
                 <label for="tecnico">Técnico</label>
-                <input type="radio" id="tecnico" name="role" value="tecnico" required>
             </div>
-            
-            <button class="default">Crear cuenta</button>
+            <br>
+            <button class="default">Registrarse</button>
             <hr>
             <button class="regresar" onclick="window.location.href='/'" >Volver a la página principal</button>
           </form>
