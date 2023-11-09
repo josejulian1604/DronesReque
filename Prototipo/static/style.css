@@ -107,6 +107,37 @@ form .create-account:hover {
   cursor: pointer;
 }
 
+form .default {
+  outline: none;
+  border: none;
+  background: #B38D5E;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .default:hover {
+  background: #8B572B;
+  cursor: pointer;
+}
+
+form .regresar {
+  outline: none;
+  border: none;
+  background: #72493E;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .regresar:hover {
+  background: #542C0F;
+  cursor: pointer;
+}
+
+/* Registro */
 form.registro {
   display: flex;
   flex-direction: column;
@@ -151,6 +182,97 @@ form.registro input:focus {
   background-color: #128C7E;
 }
 
+/* Administrador */
+form.administrador {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.administrador input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.administrador input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Default */
+form.defi {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 170px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.defi input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.defi input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Default2 */
+form.defi2 {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 250px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.defi2 input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.defi2 input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Registrar cliente */
+form.regis {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 560px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.regis input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.regis input:focus {
+  border: 1.8px solid #128C7E;
+}
 
 @media (max-width: 500px) {
   html {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agro Hawk Analista</title>
+    <title>Agro Hawk - Analista</title>
     <link rel="stylesheet" href="./login_form_2.css" />
   </head>
   <body>
@@ -12,12 +12,12 @@
       <div class="flex-div">
         <div class="name-content">
           <h1 class="logo">Analista</h1>
+          <p>Página principal</p>
         </div>
-            <form method="post" action="/analista/actualizar_servicio">
-            <input type="email" placeholder="Digite la cédula del cliente:" required />
-            <hr>
-            <button class="create-account" onclick="window.location.href='/analista/actualizar_servicio'">Actualizar servicio</button>
-            </form>
+          <form class="defi" method="post" action="/analista/actualizar_servicio">
+            <input type="text" placeholder="Digite la cédula del cliente:" required />
+            <button class="default" onclick="window.location.href='/analista/actualizar_servicio'">Actualizar servicio</button>
+          </form>
       </div>
     </div>
   </body>

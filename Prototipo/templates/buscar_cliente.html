@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agro Hawk Administrador Buscar Cliente</title>
+    <title>Agro Hawk - Administrador - Buscar Cliente</title>
     <link rel="stylesheet" href="./login_form_2.css" />
   </head>
   <body>
@@ -14,10 +14,11 @@
           <h1 class="logo">Administrador</h1>
           <p>Buscar cliente</p>
         </div>
-            <form method="post" action="/administrador/buscar_cliente">
-            <input type="email" placeholder="Digite la cédula del cliente:" required />
+            <form class="defi2" method="post" action="/administrador/buscar_cliente">
+            <input type="text" placeholder="Digite la cédula del cliente:" required />
+            <button class="default" onclick="window.location.href='/administrador/buscar_cliente'">Consultar cliente</button>
             <hr>
-            <button class="create-account" onclick="window.location.href='/administrador/buscar_cliente'">Consultar cliente</button>
+            <button class="regresar" onclick="window.location.href='/administrador'">Volver a la página principal</button>
             </form>
       </div>
     </div>
