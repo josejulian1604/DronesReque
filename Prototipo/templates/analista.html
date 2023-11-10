@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Página de Analista</title>
-</head>
-<body>
-    <h1>Bienvenido a la Página de Analista</h1>
-    <p>{{ mensaje }}</p>
-
-    <form method="post" action="/analista/actualizar_servicio">
-        <label for="cedula">Cédula del cliente:</label>
-        <input type="text" id="cedula" name="cedula" required>
-        <input type="submit" value="Actualizar Servicio">
-    </form>
-
-    <!-- Agrega aquí el contenido específico de la página de Analista -->
-</body>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Hawk - Analista</title>
+    <link rel="stylesheet" href="./login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Analista</h1>
+          <p>Página principal</p>
+        </div>
+          <form class="defi" method="post" action="/analista/actualizar_servicio">
+            <input type="text" placeholder="Digite la cédula del cliente:" required />
+            <button class="default" onclick="window.location.href='/analista/actualizar_servicio'">Actualizar servicio</button>
+          </form>
+      </div>
+    </div>
+  </body>
 </html>

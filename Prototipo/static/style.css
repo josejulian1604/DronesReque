@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f4f7;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.name-content {
+  margin-right: 7rem;
+}
+
+.name-content .logo {
+  font-size: 3.5rem;
+  color: #128C7E;
+}
+
+.name-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 310px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+form .login {
+  outline: none;
+  border: none;
+  background: #128C7E;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .login:hover {
+  background: #075E54;
+  cursor: pointer;
+}
+
+
+form a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  color: #128C7E;
+}
+
+form hr {
+  background: #f7f7f7;
+  margin: 1rem;
+}
+
+form .create-account {
+  outline: none;
+  border: none;
+  background: #06b909;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .create-account:hover {
+  background: #03ad06;
+  cursor: pointer;
+}
+
+form .default {
+  outline: none;
+  border: none;
+  background: #128C7E;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .default:hover {
+  background: #075E54;
+  cursor: pointer;
+}
+
+form .regresar {
+  outline: none;
+  border: none;
+  background: #4BBBAE;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .regresar:hover {
+  background: #0AA18E;
+  cursor: pointer;
+}
+
+/* Registro */
+form.registro {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 530px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.registro input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.registro input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Registro radios */
+.roles {
+  display: flex;
+}
+
+.roles input[type="radio"] {
+  display: none;
+}
+
+.roles label {
+  position: relative;
+  color: #128C7E;
+  border: 2px solid #128C7E;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.roles label:before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border: 2px solid #128C7E;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 1px 1px;
+}
+
+.roles input[type="radio"]:checked + label {
+  background-color: #128C7E;
+  color: white;
+}
+
+.roles input[type="radio"]:checked + label:before {
+height: 8px;
+width: 8px;
+border: 10px solid white;
+background-color: #128C7E ;
+}
+
+/* Administrador */
+form.administrador {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.administrador input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.administrador input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Default */
+form.defi {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 170px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.defi input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.defi input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Default2 */
+form.defi2 {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 250px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.defi2 input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.defi2 input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Registrar cliente */
+form.regis {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 560px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.regis input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.regis input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+@media (min-width: 501px) and (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+
+  .name-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    height: fit-content;
+  }
+
+  form input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  form .login {
+    font-size: 1.5rem;
+  }
+
+  form a {
+    font-size: 1.5rem;
+  }
+
+  form .create-account {
+    font-size: 1.5rem;
+  }
+
+  .flex-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    .header {
+      height: 90vmax;
+    }
+  }  
+}

@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Buscar Cliente</title>
-    <!-- Aquí puedes incluir enlaces a hojas de estilo CSS si las tienes -->
-</head>
-<body>
-    <h1>Búsqueda de Cliente</h1>
-    
-    <form method="post" action="/administrador/buscar_cliente">
-        <label for="cedula">Buscar por Cédula:</label>
-        <input type="text" id="cedula" name="cedula" required>
-        <input type="submit" value="Buscar">
-    </form>
-</body>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Hawk - Administrador - Buscar Cliente</title>
+    <link rel="stylesheet" href="./login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Administrador</h1>
+          <p>Buscar cliente</p>
+        </div>
+            <form class="defi2" method="post" action="/administrador/buscar_cliente">
+            <input type="text" placeholder="Digite la cédula del cliente:" required />
+            <button class="default" onclick="window.location.href='/administrador/buscar_cliente'">Consultar cliente</button>
+            <hr>
+            <button class="regresar" onclick="window.location.href='/administrador'">Volver a la página principal</button>
+            </form>
+      </div>
+    </div>
+  </body>
 </html>
+

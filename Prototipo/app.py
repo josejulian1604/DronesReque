@@ -34,7 +34,7 @@ def registro():
 
 @app.route('/administrador', methods=['GET', 'POST'])
 def administrador():
-    mensaje = "Bienvenido a la Página de Administrador"
+    mensaje = "Bienvenido Administrador"
     if request.method == 'POST':
         opcion = request.form['opcion']
         if opcion == 'registrar_cliente':
@@ -75,14 +75,23 @@ def buscar_servicio():
     return render_template('buscar_servicio.html', mensaje=mensaje)
 
 
-@app.route('/tecnico')
+@app.route('/tecnico', methods=['GET', 'POST'])
 def tecnico():
     mensaje = "¡Página de técnico!"
+    if request.method == 'POST':
+        cedula = request.form['cedula']
+        return redirect('/tecnico/consultar_servicio')
     return render_template('tecnico.html', mensaje=mensaje)
+
+@app.route('/tecnico/consultar_servicio', methods=['GET', 'POST'])
+def consultar_servicio():
+    mensaje = "¡Página de consultar servicio!"
+
+    return render_template('consultar_servicio.html', mensaje=mensaje)
 
 @app.route('/analista', methods=['GET', 'POST'])
 def analista():
-    mensaje = "¡Página de analista!"
+    mensaje = "Bienvenido Analista"
     
     if request.method == 'POST':
         cedula = request.form['cedula']
@@ -94,11 +103,11 @@ def analista():
 
     return render_template('analista.html', mensaje=mensaje)
 
-@app.route('/analista/actualizar_servicio', methods=['GET', 'POST'])
+@app.route('/analista/consultar_servicio', methods=['GET', 'POST'])
 def actualizar_servicio():
     mensaje = "¡Página de actualizar servicio!"
 
-    return render_template('actualizar_servicio.html', mensaje=mensaje)
+    return render_template('consultar_servicio.html', mensaje=mensaje)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
