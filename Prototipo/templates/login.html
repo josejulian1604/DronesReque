@@ -15,9 +15,9 @@
         </div>
           <form method="POST" action="/login">
             <label for="correo">Correo electrónico:</label>
-            <input type="email" name="correo" placeholder="nombre@agrohawk.com" required tabindex="1" />
+            <input type="email" name="correo" placeholder="nombre@agrohawk.com" tabindex="1" required oninvalid="this.setCustomValidity('Por favor ingrese su correo electrónico.')" oninput="this.setCustomValidity('')" />
             <label for="password">Contraseña:</label>
-            <input type="password" name="password" placeholder="********" required tabindex="2" >
+            <input type="password" name="password" placeholder="********" required tabindex="2" oninvalid="this.setCustomValidity('Por favor ingrese su contraseña.')" oninput="this.setCustomValidity('')">
             <button type="submit" class="login" tabindex="3" >Iniciar sesión</button>
             <hr>
             <button class="create-account" onclick="window.location.href='/registro'" tabindex="4" >Crear cuenta nueva</button>

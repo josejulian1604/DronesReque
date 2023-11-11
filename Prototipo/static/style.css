@@ -221,7 +221,7 @@ form.administrador {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 350px;
+  height: 400px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -244,7 +244,7 @@ form.defi {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 200px;
+  height: 270px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -259,6 +259,7 @@ form.defi input {
 form.defi input:focus {
   border: 1.8px solid #128C7E;
 }
+
 
 /* Default2 */
 form.defi2 {
@@ -327,6 +328,23 @@ form.crear input {
 
 form.crear input:focus {
   border: 1.8px solid #128C7E;
+}
+
+form .cerrar {
+  outline: none;
+  border: none;
+  background: #FF3333;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+form .cerrar:hover,
+form .cerrar:focus {
+  background: #b90609;
+  cursor: pointer;
+  outline: none;
 }
 
 @media (max-width: 500px) {

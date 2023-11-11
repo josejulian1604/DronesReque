@@ -15,17 +15,17 @@
         </div>
         <form class="regis" method="POST" action="/administrador/registrar_cliente">
             <label for="text">Nombre:</label>
-            <input type="text" placeholder="Andres" required tabindex="1"/>
+            <input type="text" placeholder="Andres" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese el nombre del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="correo">Apellido:</label>
-            <input type="text" placeholder="Prado" required tabindex="2"/>
+            <input type="text" placeholder="Prado" required tabindex="2" oninvalid="this.setCustomValidity('Por favor ingrese el apellido del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Número de cédula:</label>
-            <input type="text" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="3"/>
-            <label for="text">Número de celuar:</label>
-            <input type="text" placeholder="Debe utilizar el siguiente formato: 81234567" required tabindex="4"/>
+            <input type="text" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="3" oninvalid="this.setCustomValidity('Por favor ingrese el número de cédula del cliente.')" oninput="this.setCustomValidity('')"/>
+            <label for="text">Número de celular:</label>
+            <input type="text" placeholder="Debe utilizar el siguiente formato: 81234567" required tabindex="4" oninvalid="this.setCustomValidity('Por favor ingrese el número de celular del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Correo electrónico:</label>
-            <input type="email" placeholder="andres.prado@gmail.com" required tabindex="5"/>
+            <input type="email" placeholder="andres.prado@gmail.com" required tabindex="5" oninvalid="this.setCustomValidity('Por favor ingrese el correo electrónico del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Dirección:</label>
-            <input type="text" placeholder="Dirección aproximada" required tabindex="6"/>
+            <input type="text" placeholder="Dirección aproximada" required tabindex="6" oninvalid="this.setCustomValidity('Por favor ingrese una dirección aproximada del cliente.')" oninput="this.setCustomValidity('')"/>
             <button class="default" onclick="window.location.href='/administrador'" tabindex="7" >Registrar cliente</button>
             <hr>
             <button class="regresar" onclick="window.location.href='/administrador'" tabindex="8" >Volver a la página principal</button>
