@@ -45,7 +45,7 @@ form {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 310px;
+  height: 370px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -71,11 +71,12 @@ form .login {
   color: #fff;
 }
 
-form .login:hover {
+form .login:hover,
+form .login:focus {
   background: #075E54;
   cursor: pointer;
+  outline: none;
 }
-
 
 form a {
   text-decoration: none;
@@ -100,9 +101,11 @@ form .create-account {
   color: #fff;
 }
 
-form .create-account:hover {
+form .create-account:hover,
+form .create-account:focus {
   background: #03ad06;
   cursor: pointer;
+  outline: none;
 }
 
 form .default {
@@ -115,9 +118,11 @@ form .default {
   color: #fff;
 }
 
-form .default:hover {
+form .default:hover,
+form .default:focus {
   background: #075E54;
   cursor: pointer;
+  outline: none;
 }
 
 form .regresar {
@@ -130,9 +135,11 @@ form .regresar {
   color: #fff;
 }
 
-form .regresar:hover {
+form .regresar:hover,
+form .regresar:focus {
   background: #0AA18E;
   cursor: pointer;
+  outline: none;
 }
 
 /* Registro */
@@ -142,7 +149,7 @@ form.registro {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 530px;
+  height: 630px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -164,7 +171,8 @@ form.registro input:focus {
 }
 
 .roles input[type="radio"] {
-  display: none;
+  position: absolute;
+  left: -9999px;
 }
 
 .roles label {
@@ -202,6 +210,10 @@ border: 10px solid white;
 background-color: #128C7E ;
 }
 
+.roles input[type="radio"]:focus + label {
+  outline: auto; 
+}
+
 /* Administrador */
 form.administrador {
   display: flex;
@@ -232,7 +244,7 @@ form.defi {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 170px;
+  height: 200px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -255,7 +267,7 @@ form.defi2 {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 250px;
+  height: 275px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -278,7 +290,7 @@ form.regis {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 560px;
+  height: 700px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -291,6 +303,29 @@ form.regis input {
 }
 
 form.regis input:focus {
+  border: 1.8px solid #128C7E;
+}
+
+/* Crear servicio */
+form.crear {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 830px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.crear input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.crear input:focus {
   border: 1.8px solid #128C7E;
 }
 

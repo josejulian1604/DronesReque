@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Menú principal del analista">
     <title>Agro Hawk - Analista</title>
-    <link rel="stylesheet" href="./login_form_2.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <div class="content">
@@ -15,8 +14,9 @@
           <p>Página principal</p>
         </div>
           <form class="defi" method="post" action="/analista/actualizar_servicio">
-            <input type="text" placeholder="Digite la cédula del cliente:" required />
-            <button class="default" onclick="window.location.href='/analista/actualizar_servicio'">Actualizar servicio</button>
+            <label for="text">Número de cédula del cliente:</label>
+            <input type="text" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="1" />
+            <button class="default" onclick="window.location.href='/analista/actualizar_servicio'" tabindex="2" >Consultar servicio</button>
           </form>
       </div>
     </div>

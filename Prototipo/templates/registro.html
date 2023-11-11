@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agro Hawk Registrar Usuario</title>
-    <link rel="stylesheet" href="./login_form_2.css" />
+    <meta name="description" content="Se puede crear un nueva usuario de Agro Hawk">
+    <title>Agro Hawk - Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <div class="content">
@@ -14,23 +13,27 @@
           <h1 class="logo">Crear cuenta</h1>
         </div>
         <form class="registro">
-            <input type="text" placeholder="Nombre" required />
-            <input type="text" placeholder="Apellido" required />
-            <input type="email" placeholder="Correo electrónico" required />
-            <input type="password" placeholder="Contraseña" required>
-            <label>Rol:</label>
+            <label for="text">Nombre:</label>
+            <input type="text" placeholder="Mell" required tabindex="1"/>
+            <label for="text">Apellido:</label>
+            <input type="text" placeholder="Brenes" required tabindex="2"/>
+            <label for="text">Correo electrónico:</label>
+            <input type="email" placeholder="nombre@agrohawk.com" required tabindex="3"/>
+            <label for="text">Contraseña:</label>
+            <input type="password" placeholder="Debe ser de 8 caracteres con al menos un número." required tabindex="4"/>
+            <label>Seleccione su rol:</label>
             <div class="roles">
-                <input type="radio" name="role" id="administrador" required>
-                <label for="administrador">Administrador</label>
-                <input type="radio" name="role" id="analista" required>
-                <label for="analista">Analista</label>
-                <input type="radio" name="role" id="tecnico" required>
-                <label for="tecnico">Técnico</label>
+                <input type="radio" name="role" id="administrador" required tabindex="5">
+                <label for="administrador" >Administrador</label>
+                <input type="radio" name="role" id="analista" required tabindex="6">
+                <label for="analista" >Analista</label>
+                <input type="radio" name="role" id="tecnico" required tabindex="7">
+                <label for="tecnico" >Técnico</label>
             </div>
             <br>
-            <button class="default">Registrarse</button>
+            <button class="default" tabindex="8" >Registrarse</button>
             <hr>
-            <button class="regresar" onclick="window.location.href='/'" >Volver a la página principal</button>
+            <button class="regresar" onclick="window.location.href='/'" tabindex="9" >Volver a la página principal</button>
           </form>
       </div>
     </div>
