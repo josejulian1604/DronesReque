@@ -48,8 +48,6 @@ def administrador():
         opcion = request.form['opcion']
         if opcion == 'registrar_cliente':
             return redirect('/administrador/registrar_cliente')
-        elif opcion == 'crear_servicio':
-            return redirect('/administrador/crear_servicio')
         elif opcion == 'buscar_cliente':
             return redirect('/administrador/buscar_cliente')
         elif opcion == 'buscar_servicio':
@@ -70,7 +68,7 @@ def registrar_cliente():
         direccion = request.form['direccion']
 
         cursor = conn.cursor()
-        cursor.execute('EXEC RegistrarCliente ?, ?, ?, ?, ?, ?', (cedula, nombre, apellido, telefono, correo, direccion))
+        cursor.execute('EXEC CrearCliente ?, ?, ?, ?, ?, ?', (nombre, apellido, cedula, correo, direccion, telefono))
         conn.commit()
         cursor.close()
 
@@ -123,7 +121,7 @@ def tecnico():
     
     return render_template('tecnico.html')
 
-@app.route('/tecnico/consultar_servicio', methods=['GET', 'POST'])
+@app.route('/tecnico/crear_servicio', methods=['GET', 'POST'])
 def consultar_servicio():
     if request.method == 'POST':
         nombreServicio = request.form['nombreServicio']
@@ -138,7 +136,7 @@ def consultar_servicio():
         fechaFin = request.form['fechaFin']
 
         cursor = conn.cursor()
-        cursor.execute('EXEC CrearServicio ?, ?, ?, ?, ?, ?, ?, ?, ?, ?', (nombreServicio, tipoServicio, area, costo, cultivo, descripcion, dron, estado, fechaIni, fechaFin))
+        cursor.execute('EXEC CrearServicio ?, ?, ?, ?, ?, ?, ?, ?, ?, ?', (descripcion, costo, cultivo, fechaIni, fechaIni, fechaFin, estado, area, "cliente", dron, tipoServicio) ))
         conn.commit()
         cursor.close()
         
@@ -154,7 +152,7 @@ def analista():
         cedula = request.form['cedula']
 
         cursor = conn.cursor()
-        cursor.execute('EXEC ConsultarServicio ?', (cedula))
+        cursor.execute('EXEC BuscarServicio ?', (cedula))
         conn.commit()
         cursor.close()
         
