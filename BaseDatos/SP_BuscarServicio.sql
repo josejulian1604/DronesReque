@@ -3,9 +3,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE BuscarServicio
+ALTER PROCEDURE BuscarServicio
 	
-	@inID		VARCHAR(128)
+	@inCedula		VARCHAR(128)
 AS
 BEGIN
 	
@@ -20,8 +20,9 @@ BEGIN
 		S.FechaFin,
 		S.Estado,
 		S.Area
-	FROM Servicio S
-	WHERE S.id = @inID;
+	FROM [dbo].[Servicio] S
+	INNER JOIN [dbo].[Cliente] C ON C.Cedula = @inCedula
+	WHERE S.IdCliente = C.Id;
 	
 	SET NOCOUNT OFF
 END
