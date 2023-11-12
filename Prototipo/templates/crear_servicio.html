@@ -2,18 +2,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Administrador puede crear un servicio nuevo">
-    <title>Agro Hawk - Administrador - Crear servicio</title>
+    <meta name="description" content="Tecnico puede crear un servicio nuevo">
+    <title>Agro Hawk - Técnico - Crear servicio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <div class="content">
       <div class="flex-div">
         <div class="name-content">
-          <h1 class="logo">Administrador</h1>
+          <h1 class="logo">Técnico</h1>
           <p>Registrar servicio</p>
         </div>
-        <form class="crear" method="POST" action="/administrador/crear_servicio">
+        <form class="crear" method="POST" action="/tecnico/crear_servicio">
             <input type="text" name="nombreServicio" placeholder="Nombre de servicio" required tabindex="1"/>
             <input type="text" name="tipoServicio" placeholder="Tipo de servicio" required tabindex="3"/>
             <input type="text" name="area" placeholder="Área" required tabindex="4"/>
@@ -24,9 +24,9 @@
             <input type="text" name="estado" placeholder="Estado" required tabindex="9"/>
             <input type="date" name="fechaIni" placeholder="Fecha inicial" required tabindex="10"/>
             <input type="date" name="fechaFin" placeholder="Fecha final" required tabindex="11"/>
-            <button class="default" onclick="window.location.href='/administrador'" tabindex="12" >Registrar cliente</button>
+            <button class="default" onclick="window.location.href='/tecnico'" tabindex="12" >Registrar cliente</button>
             <hr>
-            <button class="regresar" onclick="window.location.href='/administrador'" tabindex="13" >Volver a la página principal</button>
+            <button class="regresar" onclick="window.location.href='/tecnico'" tabindex="13" >Volver a la página principal</button>
           </form>
       </div>
     </div>

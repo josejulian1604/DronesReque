@@ -122,7 +122,7 @@ def tecnico():
     return render_template('tecnico.html')
 
 @app.route('/tecnico/crear_servicio', methods=['GET', 'POST'])
-def consultar_servicio():
+def crear_servicio():
     if request.method == 'POST':
         nombreServicio = request.form['nombreServicio']
         tipoServicio = request.form['tipoServicio']
@@ -136,14 +136,16 @@ def consultar_servicio():
         fechaFin = request.form['fechaFin']
 
         cursor = conn.cursor()
-        cursor.execute('EXEC CrearServicio ?, ?, ?, ?, ?, ?, ?, ?, ?, ?', (descripcion, costo, cultivo, fechaIni, fechaIni, fechaFin, estado, area, "cliente", dron, tipoServicio) ))
+        cursor.execute('EXEC CrearServicio ?, ?, ?, ?, ?, ?, ?, ?, ?, ?', (descripcion, costo, cultivo, fechaIni, fechaIni, fechaFin, estado, area, "cliente", dron, tipoServicio) )
         conn.commit()
         cursor.close()
         
-        return redirect('/tecnico')
+        return redirect('/tecnico/crear_servicio')
 
 
-    return render_template('consultar_servicio.html')
+    return render_template('crear_servicio.html')
+
+
 
 @app.route('/analista', methods=['GET', 'POST'])
 def analista():
@@ -156,13 +158,13 @@ def analista():
         conn.commit()
         cursor.close()
         
-        return redirect('/analista/exito') #Crear página de éxito
+        return redirect('/analista/consultar_servicio') #Crear página de éxito
 
     return render_template('analista.html')
 
 @app.route('/analista/consultar_servicio', methods=['GET', 'POST'])
 def actualizar_servicio():
-        
+    
 
     return render_template('consultar_servicio.html')
 
