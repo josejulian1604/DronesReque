@@ -15,7 +15,7 @@
         </div>
           <form class="defi" method="post" action="/analista/actualizar_servicio">
             <label for="text">Número de cédula del cliente:</label>
-            <input type="text" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese la cédula del cliente.')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="cedula" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese la cédula del cliente.')" oninput="this.setCustomValidity('')"/>
             <button class="default" onclick="window.location.href='/analista/actualizar_servicio'" tabindex="2" >Consultar servicio</button>
             <hr>
             <button class="cerrar" onclick="window.location.href='/'" tabindex="3" >Cerrar sesión</button>

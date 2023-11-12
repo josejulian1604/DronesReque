@@ -1,4 +1,4 @@
-'''
+
 import pyodbc
 
 # Set up connection details
@@ -12,4 +12,3 @@ conn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database
 
 # Create a cursor object to execute SQL statements
 cursor = conn.cursor()
-'''
