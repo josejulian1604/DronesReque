@@ -193,7 +193,7 @@ def analista():
         conn.commit()
         cursor.close()
         
-        return render_template('servicios_cliente.html', servicios=servicios) #Crear página de éxito
+        return render_template('consultar_servicio.html', servicios=servicios) #Crear página de éxito
 
     return render_template('analista.html')
 

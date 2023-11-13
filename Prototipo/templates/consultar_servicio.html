@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Cliente</title>
+</head>
+<body>
+    <h1>Información del Cliente</h1>
+
+    <form method="post" action="/analista">
+        <!-- Mostrar la información del cliente desde los argumentos de la consulta -->
+        {% if servicios %}
+        <table>
+            <tr>
+                <th>Descripcion</th>
+                <th>Costo</th>
+                <th>Cultivo</th>
+                <th>Fecha del Contrato</th>
+                <th>Fecha de Inicio</th>
+                <th>Fecha Final</th>
+                <th>Estado</th>
+                <th>Area</th>
+            </tr>
+            {% for servicio in servicios %}
+            <tr>
+                <td>{{ servicio[0] }}</td>
+                <td>{{ servicio[1] }}</td>
+                <td>{{ servicio[2] }}</td>
+                <td>{{ servicio[3] }}</td>
+                <td>{{ servicio[4] }}</td>
+                <td>{{ servicio[5] }}</td>
+                <td>{{ servicio[6] }}</td>
+                <td>{{ servicio[7] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p> No hay servicios para mostrar</p>
+        {% endif %}
+
+        <!-- Agrega más campos según la información del cliente -->
+    </form>
+
+    <hr>
+
+    <a href="{{ url_for('analista') }}">Regresar</a>
+
+</body>
+</html>
