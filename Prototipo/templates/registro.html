@@ -12,7 +12,7 @@
         <div class="name-content">
           <h1 class="logo">Crear cuenta</h1>
         </div>
-        <form class="registro">
+        <form class="registro" method="POST" action="/registro">
             <label for="text">Nombre:</label>
             <input type="text" name="nombre" placeholder="Mell" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese su nombre.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Apellido:</label>
@@ -23,15 +23,15 @@
             <input type="password" name="password" placeholder="Debe ser de 8 caracteres con al menos un número." required tabindex="4" oninvalid="this.setCustomValidity('Por favor ingrese su contraseña.')" oninput="this.setCustomValidity('')"/>
             <label>Seleccione su rol:</label>
             <div class="roles">
-                <input type="radio" name="role" id="administrador" required tabindex="5">
+                <input type="radio" name="role" id="administrador" value="administrador" required tabindex="5">
                 <label for="administrador" >Administrador</label>
-                <input type="radio" name="role" id="analista" required tabindex="6">
+                <input type="radio" name="role" id="analista" value="analista" required tabindex="6">
                 <label for="analista" >Analista</label>
-                <input type="radio" name="role" id="tecnico" required tabindex="7">
+                <input type="radio" name="role" id="tecnico" value="tecnico" required tabindex="7">
                 <label for="tecnico" >Técnico</label>
             </div>
             <br>
-            <button class="default" tabindex="8" >Registrarse</button>
+            <button class="default" type="submit" tabindex="8" >Registrarse</button>
             <hr>
             <button class="regresar" onclick="window.location.href='/'" tabindex="9" >Volver a la página principal</button>
           </form>
