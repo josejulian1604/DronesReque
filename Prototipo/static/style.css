@@ -221,7 +221,7 @@ form.administrador {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 340px;
+  height: 330px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -314,7 +314,7 @@ form.crear {
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 830px;
+  height: 920px;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -345,6 +345,29 @@ form .cerrar:focus {
   background: #b90609;
   cursor: pointer;
   outline: none;
+}
+
+/* Información cliente */
+form.infor {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  width: 530px;
+  height: 660px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+form.infor input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+form.infor input:focus {
+  border: 1.8px solid #128C7E;
 }
 
 @media (max-width: 500px) {

@@ -1,16 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
-from database import establecer_conexion
-import pyodbc
+#from database import establecer_conexion
+#import pyodbc
 
 
 app = Flask(__name__)
 
-conn = establecer_conexion()
+'''conn = establecer_conexion()
 
 if conn is None:
     print("No se pudo establecer la conexión. La aplicación no se iniciará.")
 else:
-    print("La conexión se ha establecido correctamente.")
+    print("La conexión se ha establecido correctamente.")'''
 
 CEDULA = None
 

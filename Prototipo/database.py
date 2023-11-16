@@ -1,5 +1,5 @@
 
-import pyodbc
+'''import pyodbc
 
 def establecer_conexion():
     server = 'DESKTOP-LHKIQDK'
@@ -13,4 +13,4 @@ def establecer_conexion():
         return conn
     except pyodbc.Error as ex:
         print("Error en la conexión:", ex)
-        return None
+        return None'''

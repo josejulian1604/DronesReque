@@ -1,18 +1,44 @@
-<!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información del Cliente</title>
-</head>
-<body>
-    <h1>Información del Cliente</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Analista puede consultar servicio">
+    <title>Agro Hawk - Analista - Consultar servicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Analista</h1>
+          <p>Consultar servicio</p>
+        </div>
+        <form class="infor" method="post" action="/analista">
+            <label for="text">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" value="{{ servicio[0] }}" readonly>
+            <label for="correo">Costo:</label>
+            <input type="text" id="costo" name="costo" value="{{ servicio[1] }}" readonly>
+            <label for="text">Cultivo:</label>
+            <input type="text" id="cultivo" name="cultivo" value="{{ servicio[2] }}" readonly>
+            <label for="text">Fecha del Contrato:</label>
+            <input type="text" id="fechaDelContrato" name="fechaDelContrato" value="{{ servicio[3] }}" readonly>
+            <label for="text">Fecha de Inicio:</label>
+            <input type="email" id="fechaDeInicio" name="fechaDeInicio" value="{{ servicio[4] }}" readonly>
+            <label for="text">Fecha Final:</label>
+            <input type="text" id="fechaFinal" name="fechaFinal" value="{{ servicio[5] }}" readonly>
+            <label for="text">Estado:</label>
+            <input type="text" id="estado" name="estado" value="{{ servicio[6] }}" readonly>
+            <label for="text">Área:</label>
+            <input type="text" id="Area" name="Area" value="{{ servicio[7] }}" readonly>
+            <hr>
+            <button class="regresar" onclick="window.location.href='/analista'" tabindex="8" >Volver a la página principal</button>
+          </form>
+      </div>
+    </div>
+  </body>
+</html>
 
-    <form method="post" action="/analista">
-        <!-- Mostrar la información del cliente desde los argumentos de la consulta -->
-        {% if servicios %}
-        <table>
-            <tr>
+
                 <th>Descripcion</th>
                 <th>Costo</th>
                 <th>Cultivo</th>

@@ -15,7 +15,7 @@
         </div>
             <form class="defi2" method="post" action="/administrador/buscar_cliente">
               <label for="text">Número de cédula del cliente:</label>
-              <input type="text" name="cedula" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese la cédula del cliente.')" oninput="this.setCustomValidity('')"/>
+              <input type="text" name="cedula" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="1" title="Debe ingresar un número de 9 dígitos" oninvalid="this.setCustomValidity('Por favor ingrese la cédula del cliente.')" oninput="this.setCustomValidity('')"/>
             <button class="default" onclick="window.location.href='/administrador/buscar_cliente'" tabindex="2" >Consultar cliente</button>
             <hr>
             <button class="regresar" onclick="window.location.href='/administrador'" tabindex="3" >Volver a la página principal</button>

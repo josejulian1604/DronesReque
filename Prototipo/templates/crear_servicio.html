@@ -2,8 +2,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Tecnico puede crear un servicio nuevo">
-    <title>Agro Hawk - Técnico - Crear servicio</title>
+    <meta name="description" content="Técnico puede crear un servicio nuevo">
+    <title>Agro Hawk - Técnico - Registrar servicio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
@@ -14,16 +14,25 @@
           <p>Registrar servicio</p>
         </div>
         <form class="crear" method="POST" action="/tecnico/crear_servicio">
-            <input type="text" name="tipoServicio" placeholder="Tipo de servicio" required tabindex="1"/>
-            <input type="text" name="area" placeholder="Área" required tabindex="2"/>
-            <input type="text" name="costo" placeholder="Costo" required tabindex="3"/> 
-            <input type="text" name="cultivo" placeholder="Cultivo" required tabindex="4"/>
-            <input type="text" name="descripcion" placeholder="Descripción" required tabindex="5"/>
-            <input type="text" name="dron" placeholder="Dron" required tabindex="6"/>
-            <input type="text" name="estado" placeholder="Estado" required tabindex="7"/>
-            <input type="date" name="fechaIni" placeholder="Fecha inicial" required tabindex="8"/>
-            <input type="date" name="fechaFin" placeholder="Fecha final" required tabindex="9"/>
-            <button class="default" onclick="window.location.href='/tecnico'" tabindex="10" >Agregar Servicio</button>
+            <label for="text">Tipo de Servicio:</label>
+            <input type="text" name="tipoServicio" placeholder="Fumigación, mapeado..." required tabindex="1" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios"/>
+            <label for="text">Área:</label>
+            <input type="text" name="area" placeholder="Área en héctareas" required tabindex="2" title="Debe ingresar un número entero positivo"/>
+            <label for="text">Costo:</label>
+            <input type="text" name="costo" placeholder="En colones" required tabindex="3"/ title="Debe ingresar un número entero positivo"> 
+            <label for="text">Cultivo:</label>
+            <input type="text" name="cultivo" placeholder="Banano, piña..." required tabindex="4" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios"/>
+            <label for="text">Descripción:</label>
+            <input type="text" name="descripcion" placeholder="¿Cuándo, cómo y qué se hizo?" required tabindex="5" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios"/>
+            <label for="text">Dron:</label>
+            <input type="text" name="dron" placeholder="Modelo de dron" required tabindex="6" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios"/>
+            <label for="text">Estado:</label>
+            <input type="text" name="estado" placeholder="0 ó 1" required tabindex="7"  title="Ingresa el estado del servicio: utiliza '0' para indicar que está en progreso y '1' para indicar que está completado"/>
+            <label for="text">Fecha inicial:</label>
+            <input type="date" name="fechaIni" placeholder="Fecha inicial de servicio" required tabindex="8" title="Fecha doende se empezó a trabjar en el servicio"/>
+            <label for="text">Fecha final:</label>
+            <input type="date" name="fechaFin" placeholder="Fecha final del servicio" required tabindex="9" title="Fecha doende se terminó de trabjar en el servicio"/>
+            <button class="default" onclick="window.location.href='/tecnico'" tabindex="10" >Documentar servicio</button>
             <hr>
             <button class="regresar" onclick="window.location.href='/tecnico'" tabindex="12" >Volver a la página principal</button>
           </form>

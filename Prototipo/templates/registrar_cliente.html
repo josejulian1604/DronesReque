@@ -15,13 +15,13 @@
         </div>
         <form class="regis" method="POST" action="/administrador/registrar_cliente">
             <label for="text">Nombre:</label>
-            <input type="text" name="nombre" placeholder="Andres" required tabindex="1" oninvalid="this.setCustomValidity('Por favor ingrese el nombre del cliente.')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="nombre" placeholder="Andrés" required tabindex="1" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios" oninvalid="this.setCustomValidity('Por favor ingrese el nombre del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="correo">Apellido:</label>
-            <input type="text" name="apellido" placeholder="Prado" required tabindex="2" oninvalid="this.setCustomValidity('Por favor ingrese el apellido del cliente.')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="apellido" placeholder="Prado" required tabindex="2" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios" oninvalid="this.setCustomValidity('Por favor ingrese el apellido del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Número de cédula:</label>
-            <input type="text" name="cedula" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="3" oninvalid="this.setCustomValidity('Por favor ingrese el número de cédula del cliente.')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="cedula" placeholder="Debe utilizar el siguiente formato: 101110111" required tabindex="3" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" oninvalid="this.setCustomValidity('Por favor ingrese el número de cédula del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Número de celular:</label>
-            <input type="text" name="telefono" placeholder="Debe utilizar el siguiente formato: 81234567" required tabindex="4" oninvalid="this.setCustomValidity('Por favor ingrese el número de celular del cliente.')" oninput="this.setCustomValidity('')"/>
+            <input type="text" name="telefono" placeholder="Debe utilizar el siguiente formato: 81234567" required tabindex="4" pattern="[0-9]{8}" title="Debe ingresar un número de 8 dígitos" oninvalid="this.setCustomValidity('Por favor ingrese el número de celular del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Correo electrónico:</label>
             <input type="email" name="correo" placeholder="andres.prado@gmail.com" required tabindex="5" oninvalid="this.setCustomValidity('Por favor ingrese el correo electrónico del cliente.')" oninput="this.setCustomValidity('')"/>
             <label for="text">Dirección:</label>
